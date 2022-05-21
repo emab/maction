@@ -37,7 +37,6 @@ const reducer = (state: State, action: AnyAction): State => {
     // Use the action creator to match the action
     if (increment.matches(action)) {
         // This is now strongly typed
-        const {value} = action;
         return {...state, value: action.value}
     }
 
