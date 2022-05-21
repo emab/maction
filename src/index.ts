@@ -14,7 +14,7 @@ export type SecondaryReducer<State, ActionCreator extends ActionCreatorFn> = (
 export const withPrefix = (prefix: string) => (actionType: string) =>
   `${prefix}${actionType}`;
 
-export const maction = <ActionCreator extends ActionCreatorFn>(
+export const createMaction = <ActionCreator extends ActionCreatorFn>(
   actionCreator: ActionCreator
 ): MatchableAction<ActionCreator> =>
   Object.assign(actionCreator, {
@@ -22,7 +22,7 @@ export const maction = <ActionCreator extends ActionCreatorFn>(
       action.type === actionCreator().type,
   });
 
-const reduceSlice =
+const reduceForActionBuilder =
   <State>() =>
   <ActionCreator extends ActionCreatorFn>(
     actionCreator: ActionCreator,
@@ -31,5 +31,5 @@ const reduceSlice =
     reduce;
 
 export const matchedReducerFactory = <State>() => ({
-  reduceForAction: reduceSlice<State>(),
+  reduceForAction: reduceForActionBuilder<State>(),
 });
