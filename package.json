@@ -1,6 +1,6 @@
 {
   "name": "@emab/maction",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "tsup": {
     "entry": ["src/index.ts"],
     "splitting": false,
