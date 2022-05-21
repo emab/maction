@@ -23,7 +23,7 @@ const increment = createMaction((value: number) => ({
 
 That is it! 🎉
 
-You don't need to define an `interface` or create an `enum` to type the actions. Instead, the action creator itself can
+You don't need to define an `interface` or `type` for the action - or create an `enum` to record the action types. Instead, the action creator itself can
 be
 used to match the action in the reducer. It is important that the action type is unique as you'd expect (a function
 called `createPrefix` is provided to help with that).
