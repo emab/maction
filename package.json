@@ -1,0 +1,33 @@
+{
+  "name": "maction",
+  "version": "0.0.1",
+  "tsup": {
+    "entry": ["src/index.ts"],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true
+  },
+  "scripts": {
+    "build": "tsup --dts"
+  },
+  "main": "dist/index.js",
+  "type": "module",
+  "files": ["dist/"],
+  "types": "dist/index.d.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react-redux": "^7.1.24",
+    "@types/redux": "^3.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.2",
+    "prettier": "^2.6.2",
+    "react-redux": "^8.0.1",
+    "redux": "^4.2.0",
+    "tsup": "^5.12.8",
+    "typescript": "^4.6.4"
+  }
+}
