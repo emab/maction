@@ -1,6 +1,6 @@
 {
   "name": "@emab/maction",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "keywords": ["typescript", "redux", "react-redux", "actions", "matcher"],
   "repository": "https://github.com/emab/maction",
