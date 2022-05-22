@@ -13,7 +13,7 @@ by Lenz Weber, an author of [redux-toolkit](https://github.com/reduxjs/redux-too
 Creates a matchable action creator.
 
 ```ts
-import {createMaction} from "maction";
+import {createMaction} from "@emab/maction";
 
 const increment = createMaction((value: number) => ({
     type: "INCREMENT",
@@ -49,7 +49,7 @@ const reducer = (state: State, action: AnyAction): State => {
 A simple utility function to create namespaced action types.
 
 ```ts
-import {createMaction, createPrefix} from "maction";
+import {createMaction, createPrefix} from "@emab/maction";
 
 const withPrefix = createPrefix("COUNTER_");
 
@@ -72,7 +72,7 @@ you'll get TS warnings here without having to go digging too far!
 `State` type should be provided as a generic argument to the factory.
 
 ```ts
-import {matchableReducerFactory} from "maction";
+import {matchableReducerFactory} from "@emab/maction";
 
 const reduceForAction = matchableReducerFactory<State>();
 
@@ -169,7 +169,7 @@ Now the same code using `maction`:
 
 ```ts
 // actions.ts
-import {createMaction} from "maction";
+import {createMaction} from "@emab/maction";
 
 export const incrementAction = createMaction((value: number) => ({
     type: "INCREMENT",
